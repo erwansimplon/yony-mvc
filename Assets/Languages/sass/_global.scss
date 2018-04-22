@@ -1,0 +1,196 @@
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////              VALUES GLOBAL                 ////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+
+
+*, *:before, *:after {
+  @include box-sizing();
+  margin: 0;
+  padding: 0;
+}
+
+a, input, textarea, button, a:visited, input:visited, textarea:visited, button:visited {
+  @extend .link;
+  @include transition(all 0.4s ease 0s);
+}
+
+input, textarea, button, input:visited, textarea:visited, button:visited {
+  border: none;
+}
+
+textarea{
+  resize: none;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////                   LOGO                     ////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+
+.logo{
+  @include inline-block();
+  @include hauteur_largeur(75px, 100px);
+
+  a{
+    @include hauteur_largeur(100%, 100%);
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////                   MENU                     ////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+
+.menu {
+  @include inline-block();
+  @include media-screen($responsive_min){
+    display: none;
+  }
+
+  float: right;
+
+  .nav {
+    padding: 24px 10px;
+
+    li {
+      @include inline-block();
+
+      &.fade a{
+        color: transparent;
+        text-shadow: 0 0 3px $li_menu_flou;
+      }
+
+      a {
+        @include font(17px, $police_nav);
+
+        color: $menu;
+        display: block;
+        padding: 5px 15px;
+        text-transform: uppercase;
+        text-shadow: 0 1px 1px $li_menu;
+
+        &:hover, &:active{
+          color: $orange;
+        }
+      }
+    }
+  }
+}
+
+.menu-collapsed {
+
+  @extend .scroll;
+
+  @include top_right(10px, 9px);
+  @include transition(all .25s);
+  @include hauteur_largeur(36px, 36px);
+  @include media-screen($responsive_min){
+    display: block;
+  }
+
+  z-index: 1;
+  display: none;
+  position: fixed;
+  cursor: pointer;
+
+  ul {
+    @include transition(all 0s);
+
+    position: fixed;
+    left: -9000px;
+  }
+}
+
+.bar {
+  @include bar();
+  @include top_right(24px, 12px);
+
+  position: fixed;
+
+  &:before, &:after{
+    @include bar();
+    right: 0;
+    position: absolute;
+  }
+
+  &:before {
+    top: -8px;
+  }
+  &:after {
+    top: 8px;
+  }
+}
+
+.menu-expanded {
+  @include top_right(0, 0);
+  @include transition(all .25s);
+  @include border-radius(0);
+  @include hauteur_largeur(100%, 100%);
+
+  text-align: center;
+  line-height: 150px;
+  background-color: $background_menu_tel;
+
+  ul {
+    @include transition(all 0s);
+
+    left: 0;
+    z-index: 2;
+    position: relative;
+  }
+
+  a {
+    @include transition(all .15s);
+
+    font-size: 2em;
+    padding: 5px;
+    color: $white;
+    display:block;
+
+    &:hover {
+      @include transition(all .15s);
+
+      color: $li_menu_tel_hover;
+      background-color: $background_menu_tel_hover;
+      border: 1px solid $border_menu_tel_hover;
+      letter-spacing: 2px;
+    }
+  }
+
+  .bar {
+    @include transition(all .25s);
+
+    background-color: transparent;
+
+    &:before {
+      @include bar-expanded(45deg);
+    }
+
+    &:after {
+      @include bar-expanded(-45deg);
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////                  FOOTER                    ////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+
+footer {
+  @include hauteur_largeur(auto, 100%);
+  @include media-screen($responsive_min){
+    @include inline-block();
+  }
+
+  bottom: 0;
+  display: block;
+  position: absolute;
+  background-color: $color_text;
+
+  .copyright {
+    @include font(16px, $police);
+
+    color: $white;
+    margin-left: 5px;
+  }
+}

@@ -1,0 +1,517 @@
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:700);
+/* COULEUR MENU */
+/* COULEUR MENU LEFT DOCUMENTATION*/
+/* COULEUR MENU VERSION PORTABLE*/
+/* COULEUR PARAGRAPHE */
+/* POLICE DU SITE */
+/* FORMAT RESPONSIVE */
+/* STATIC */
+/* VARIABLE */
+/* RESPONSIVE */
+@keyframes pulsation_bouton {
+  from {
+    box-shadow: 0 0 0 -3px rgba(255, 255, 255, 0), 0 0 0 0 #dab349;
+  }
+  to {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0), 0 0 0 13px rgba(255, 255, 255, 0);
+  }
+}
+/* line 7, ../../sass/_extends.scss */
+.link, a, input, textarea, button, a:visited, input:visited, textarea:visited, button:visited {
+  outline: medium none;
+  text-decoration: none;
+}
+
+/* line 12, ../../sass/_extends.scss */
+.button, .container .block_div_download .button_download, .container .block_div_feature .button_detail {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 18px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  height: auto;
+  width: 40%;
+  position: relative;
+  display: inline-block;
+  padding: 14px 25px;
+  text-align: center;
+}
+@media screen and (max-width: 1705px) {
+  /* line 12, ../../sass/_extends.scss */
+  .button, .container .block_div_download .button_download, .container .block_div_feature .button_detail {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 1500px) {
+  /* line 12, ../../sass/_extends.scss */
+  .button, .container .block_div_download .button_download, .container .block_div_feature .button_detail {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1238px) {
+  /* line 12, ../../sass/_extends.scss */
+  .button, .container .block_div_download .button_download, .container .block_div_feature .button_detail {
+    display: block;
+    width: 38%;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 12, ../../sass/_extends.scss */
+  .button, .container .block_div_download .button_download, .container .block_div_feature .button_detail {
+    width: 75%;
+  }
+}
+
+/* line 31, ../../sass/_extends.scss */
+.button:hover, .container .block_div_download .button_download:hover, .container .block_div_feature .button_detail:hover {
+  animation: pulsation_bouton 0.8s ease-out;
+}
+
+/* line 35, ../../sass/_extends.scss */
+.scroll, .menu-collapsed {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 8, ../../sass/_global.scss */
+*, *:before, *:after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 14, ../../sass/_global.scss */
+a, input, textarea, button, a:visited, input:visited, textarea:visited, button:visited {
+  transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease 0s;
+}
+
+/* line 19, ../../sass/_global.scss */
+input, textarea, button, input:visited, textarea:visited, button:visited {
+  border: none;
+}
+
+/* line 23, ../../sass/_global.scss */
+textarea {
+  resize: none;
+}
+
+/* line 31, ../../sass/_global.scss */
+.logo {
+  position: relative;
+  display: inline-block;
+  height: 75px;
+  width: 100px;
+}
+/* line 35, ../../sass/_global.scss */
+.logo a {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 44, ../../sass/_global.scss */
+.menu {
+  position: relative;
+  display: inline-block;
+  float: right;
+}
+@media screen and (max-width: 1238px) {
+  /* line 44, ../../sass/_global.scss */
+  .menu {
+    display: none;
+  }
+}
+/* line 52, ../../sass/_global.scss */
+.menu .nav {
+  padding: 24px 10px;
+}
+/* line 55, ../../sass/_global.scss */
+.menu .nav li {
+  position: relative;
+  display: inline-block;
+}
+/* line 58, ../../sass/_global.scss */
+.menu .nav li.fade a {
+  color: transparent;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+}
+/* line 63, ../../sass/_global.scss */
+.menu .nav li a {
+  font-family: "Source Code Pro", sans-serif;
+  font-size: 17px;
+  color: #666666;
+  display: block;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+/* line 72, ../../sass/_global.scss */
+.menu .nav li a:hover, .menu .nav li a:active {
+  color: #ff710b;
+}
+
+/* line 80, ../../sass/_global.scss */
+.menu-collapsed {
+  top: 10px;
+  right: 9px;
+  transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  height: 36px;
+  width: 36px;
+  z-index: 1;
+  display: none;
+  position: fixed;
+  cursor: pointer;
+}
+@media screen and (max-width: 1238px) {
+  /* line 80, ../../sass/_global.scss */
+  .menu-collapsed {
+    display: block;
+  }
+}
+/* line 96, ../../sass/_global.scss */
+.menu-collapsed ul {
+  transition: all 0s;
+  -moz-transition: all 0s;
+  -webkit-transition: all 0s;
+  position: fixed;
+  left: -9000px;
+}
+
+/* line 104, ../../sass/_global.scss */
+.bar {
+  height: 6px;
+  width: 30px;
+  transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  content: "";
+  background-color: black;
+  top: 24px;
+  right: 12px;
+  position: fixed;
+}
+/* line 110, ../../sass/_global.scss */
+.bar:before, .bar:after {
+  height: 6px;
+  width: 30px;
+  transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  content: "";
+  background-color: black;
+  right: 0;
+  position: absolute;
+}
+/* line 116, ../../sass/_global.scss */
+.bar:before {
+  top: -8px;
+}
+/* line 119, ../../sass/_global.scss */
+.bar:after {
+  top: 8px;
+}
+
+/* line 124, ../../sass/_global.scss */
+.menu-expanded {
+  top: 0;
+  right: 0;
+  transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 150px;
+  background-color: rgba(76, 76, 76, 0.85);
+}
+/* line 134, ../../sass/_global.scss */
+.menu-expanded ul {
+  transition: all 0s;
+  -moz-transition: all 0s;
+  -webkit-transition: all 0s;
+  left: 0;
+  z-index: 2;
+  position: relative;
+}
+/* line 142, ../../sass/_global.scss */
+.menu-expanded a {
+  transition: all 0.15s;
+  -moz-transition: all 0.15s;
+  -webkit-transition: all 0.15s;
+  font-size: 2em;
+  padding: 5px;
+  color: white;
+  display: block;
+}
+/* line 150, ../../sass/_global.scss */
+.menu-expanded a:hover {
+  transition: all 0.15s;
+  -moz-transition: all 0.15s;
+  -webkit-transition: all 0.15s;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  letter-spacing: 2px;
+}
+/* line 160, ../../sass/_global.scss */
+.menu-expanded .bar {
+  transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  background-color: transparent;
+}
+/* line 165, ../../sass/_global.scss */
+.menu-expanded .bar:before {
+  transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  transform: rotate(45deg);
+  top: -0px;
+}
+/* line 169, ../../sass/_global.scss */
+.menu-expanded .bar:after {
+  transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  transform: rotate(-45deg);
+  top: -0px;
+}
+
+/* line 179, ../../sass/_global.scss */
+footer {
+  height: auto;
+  width: 100%;
+  bottom: 0;
+  display: block;
+  position: absolute;
+  background-color: #818181;
+}
+@media screen and (max-width: 1238px) {
+  /* line 179, ../../sass/_global.scss */
+  footer {
+    position: relative;
+    display: inline-block;
+  }
+}
+/* line 190, ../../sass/_global.scss */
+footer .copyright {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 16px;
+  color: white;
+  margin-left: 5px;
+}
+
+/* COMPLEMENT DE CLASSE */
+/* line 62, ../../sass/page/home.scss */
+.block, .container .block_div_download, .container .block_div_feature {
+  width: 35%;
+  padding: 2% 2% 3% 2%;
+}
+
+/* line 67, ../../sass/page/home.scss */
+.title_block, .container .block_div_download .block_title_download, .container .block_div_feature .block_title_feature {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 32px;
+}
+@media screen and (max-width: 1238px) {
+  /* line 67, ../../sass/page/home.scss */
+  .title_block, .container .block_div_download .block_title_download, .container .block_div_feature .block_title_feature {
+    text-align: center;
+  }
+}
+
+/* line 86, ../../sass/page/home.scss */
+.slider {
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+@media screen and (max-width: 1238px) {
+  /* line 86, ../../sass/page/home.scss */
+  .slider {
+    margin-top: 8%;
+  }
+}
+
+@media screen and (max-width: 1238px) {
+  /* line 101, ../../sass/page/home.scss */
+  .container_index {
+    padding-top: 15%;
+  }
+}
+
+/* line 107, ../../sass/page/home.scss */
+.container {
+  height: auto;
+  width: 100%;
+  /* BLOCK LEFT : PAGE INDEX */
+  /* BLOCK RIGHT : PAGE INDEX */
+}
+/* line 112, ../../sass/page/home.scss */
+.container .block_div_download {
+  position: relative;
+  display: inline-block;
+  float: left;
+}
+@media screen and (max-width: 1705px) {
+  /* line 112, ../../sass/page/home.scss */
+  .container .block_div_download {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 1500px) {
+  /* line 112, ../../sass/page/home.scss */
+  .container .block_div_download {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 1238px) {
+  /* line 112, ../../sass/page/home.scss */
+  .container .block_div_download {
+    display: block;
+    float: none;
+    clear: both;
+    width: 100%;
+    padding-bottom: 15%;
+  }
+}
+/* line 119, ../../sass/page/home.scss */
+.container .block_div_download .button_download {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  color: white;
+  background-color: #ff710b;
+}
+/* line 128, ../../sass/page/home.scss */
+.container .block_div_download p {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 18px;
+  text-align: justify;
+  color: #818181;
+  padding: 5% 0;
+}
+@media screen and (max-width: 1238px) {
+  /* line 128, ../../sass/page/home.scss */
+  .container .block_div_download p {
+    width: 50%;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 128, ../../sass/page/home.scss */
+  .container .block_div_download p {
+    width: 100%;
+  }
+}
+/* line 135, ../../sass/page/home.scss */
+.container .block_div_feature {
+  position: relative;
+  display: inline-block;
+  float: right;
+}
+@media screen and (max-width: 1705px) {
+  /* line 135, ../../sass/page/home.scss */
+  .container .block_div_feature {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 1500px) {
+  /* line 135, ../../sass/page/home.scss */
+  .container .block_div_feature {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 1238px) {
+  /* line 135, ../../sass/page/home.scss */
+  .container .block_div_feature {
+    display: block;
+    float: none;
+    clear: both;
+    width: 100%;
+    padding-bottom: 15%;
+  }
+}
+/* line 138, ../../sass/page/home.scss */
+.container .block_div_feature .block_title_feature {
+  padding-bottom: 4%;
+}
+/* line 144, ../../sass/page/home.scss */
+.container .block_div_feature .button_detail {
+  margin-top: 2%;
+  color: #ff710b;
+  border: #ff710b 2px solid;
+  transition: all 0.5s;
+}
+@media screen and (max-width: 1238px) {
+  /* line 144, ../../sass/page/home.scss */
+  .container .block_div_feature .button_detail {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+/* line 156, ../../sass/page/home.scss */
+.container .block_div_feature .button_detail:hover span {
+  padding-right: 25px;
+}
+/* line 160, ../../sass/page/home.scss */
+.container .block_div_feature .button_detail:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/* line 165, ../../sass/page/home.scss */
+.container .block_div_feature .button_detail span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+/* line 171, ../../sass/page/home.scss */
+.container .block_div_feature .button_detail span:after {
+  content: '\f061';
+  font: normal normal normal 23px/1 FontAwesome;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+/* line 183, ../../sass/page/home.scss */
+.container .block_div_feature p {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 18px;
+  text-align: justify;
+  color: #818181;
+  padding: 1% 0;
+}
+@media screen and (max-width: 1238px) {
+  /* line 183, ../../sass/page/home.scss */
+  .container .block_div_feature p {
+    width: 50%;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 183, ../../sass/page/home.scss */
+  .container .block_div_feature p {
+    width: 100%;
+  }
+}

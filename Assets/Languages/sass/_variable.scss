@@ -1,0 +1,42 @@
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////                  VARIABLE                  ////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+
+
+$orange : #ff710b;
+$white : white;
+$black : black;
+
+/* COULEUR MENU */
+
+$menu : #666666;
+$li_menu : rgba(0, 0, 0, 0.5);
+$li_menu_flou : rgba(0, 0, 0, 0.4);
+
+/* COULEUR MENU LEFT DOCUMENTATION*/
+
+$menu_left : #363A41;
+
+/* COULEUR MENU VERSION PORTABLE*/
+
+$background_menu_tel : rgba(76, 76, 76, 0.85);
+$background_menu_tel_hover : rgba(white, .8);
+$li_menu_tel_hover : #333;
+$border_menu_tel_hover : rgba(255, 255, 255, .15);
+
+/* COULEUR PARAGRAPHE */
+
+$color_text : #818181;
+
+/* POLICE DU SITE */
+
+$police_nav : 'Source Code Pro', sans-serif;
+$police : 'Open Sans', Helvetica, sans-serif;
+
+/* FORMAT RESPONSIVE */
+$responsive_tel : 600px;
+$responsive_min : 1238px;
+$responsive_moyen : 1500px;
+$responsive_large : 1705px;

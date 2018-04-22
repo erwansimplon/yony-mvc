@@ -1,0 +1,38 @@
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////                  EXTENDS                   ////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+
+.link{
+  outline: medium none;
+  text-decoration: none;
+}
+
+.button{
+  @include font(18px, $police);
+  @include border-radius(5px);
+  @include hauteur_largeur(auto, 40%);
+  @include inline-block();
+
+  @include responsive_large_moyen_width(45%, 50%);
+  @include media-screen($responsive_min){
+    display: block;
+    width: 38%;
+  };
+  @include media-screen($responsive_tel){
+    width: 75%;
+  };
+
+  padding: 14px 25px;
+  text-align: center;
+}
+
+.button:hover{
+  animation:pulsation_bouton .8s ease-out
+}
+
+.scroll{
+  overflow-y: scroll;
+  -webkit-overflow-scrolling:touch;
+}

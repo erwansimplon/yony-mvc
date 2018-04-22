@@ -1,0 +1,112 @@
+@import "import";
+
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////                    MIXIN                   ////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+
+@mixin div($background, $float, $width) {
+  background-color: $background;
+  display: inline-block;
+  float: $float;
+  width: $width;
+  height: auto;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////                    EXTENDS                   //////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+
+.block{
+  @include media-screen($responsive_min) {
+    margin-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  margin-top: 2%;
+  padding-bottom: 2%;
+}
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////                   SCSS                     ////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+
+.container_documentation {
+
+  @include media-screen($responsive_min) {
+    padding-top: 5%;
+  }
+
+  .block_div_menu_left {
+    position: fixed;
+    width: 12%;
+    height: 100%;
+    background-color: $menu_left;
+    left: 0;
+
+    .menu-left{
+      margin: 15px 0 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li.maintab > a {
+      height: 39px;
+      line-height: 24px;
+      font-weight: bold;
+      text-transform: uppercase;
+      background: #363A41;
+      padding: 0 10px;
+      color: #bbcdd2;
+      position: relative;
+      font: 400 12px/1.42857 "Open Sans",Helvetica,Arial,sans-serif;
+      -webkit-tap-highlight-color: transparent;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    li.main-sub-menu{
+      padding-left: 20px;
+    }
+
+    li.assets-menu:hover ~ li.assets-sub-menu,
+    li.assets-menu:focus ~ li.assets-sub-menu,
+    li.core-menu:hover ~ li.core-sub-menu,
+    li.core-menu:focus ~ li.core-sub-menu{
+      display: block;
+    }
+
+    li.assets-sub-menu, li.core-sub-menu{
+      display: none;
+      padding-left: 40px;
+    }
+
+    li.main-sub-menu > a, li.sub-menu > a{
+      cursor: pointer;
+      position: relative;
+      height: 34px;
+      background-color: #363A41;
+      color: #BEBEBE;
+      line-height: 34px;
+      text-decoration: none;
+      -webkit-transition-property: background-color;
+      transition-property: background-color;
+      -webkit-transition-duration: .2s;
+      transition-duration: .2s;
+      -webkit-transition-timing-function: ease-out;
+      transition-timing-function: ease-out;
+    }
+
+  }
+
+  .block_div_center{
+
+    @include div($white, right, 88%);
+    @extend .block;
+  }
+}

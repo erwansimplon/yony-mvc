@@ -1,0 +1,92 @@
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////                    MIXIN                   ////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+
+/* STATIC */
+
+@mixin inline-block() {
+  position: relative;
+  display: inline-block;
+}
+
+@mixin center-margin(){
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin box-sizing() {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* VARIABLE */
+
+@mixin transition($vitesse){
+  transition: $vitesse;
+  -moz-transition: $vitesse;
+  -webkit-transition: $vitesse;
+}
+
+@mixin border-radius($pourcentage){
+  border-radius: $pourcentage;
+  -moz-border-radius: $pourcentage;
+  -webkit-border-radius: $pourcentage;
+}
+
+@mixin transform($transform) {
+  transform: $transform;
+  -moz-transform: $transform;
+  -webkit-transform: $transform;
+}
+
+@mixin font($size, $police){
+  font-family: $police;
+  font-size: $size;
+}
+
+@mixin hauteur_largeur($height, $width){
+  height: $height;
+  width: $width;
+}
+
+@mixin top_right($top, $right){
+  top: $top;
+  right: $right;
+}
+
+/* RESPONSIVE */
+
+@mixin media-screen($responsive){
+  @media screen and (max-width: $responsive) {
+    @content;
+  }
+}
+
+@mixin responsive_large_moyen_width($width_large, $width_moyen){
+  @include media-screen($responsive_large){
+    width: $width_large;
+  }
+
+  @include media-screen($responsive_moyen){
+    width: $width_moyen;
+  }
+}
+
+@mixin bar() {
+  @include hauteur_largeur(6px, 30px);
+  @include transition(all .25s);
+  @include border-radius(15px);
+
+  content: "";
+  background-color: $black;
+}
+
+@mixin bar-expanded($deg) {
+  @include transition(all .25s);
+
+  transform: rotate($deg);
+  top: -0px;
+}

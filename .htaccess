@@ -1,0 +1,25 @@
+Options +FollowSymlinks
+RewriteEngine On
+
+# rewrite page site
+RewriteRule	^/?$ FrontController.php [L]
+RewriteRule	^Contact$ ?page=Contact [L]
+RewriteRule	^Documentation$ ?page=Documentation [L]
+RewriteRule	^yony$ Assets/Document/Zip/Yony.zip [L]
+
+# head
+RewriteRule	^css-Home$ Assets/Languages/Css/page/home.css [L]
+RewriteRule	^css-Contact$ Assets/Languages/Css/page/contact.css [L]
+RewriteRule	^css-Documentation$ Assets/Languages/Css/page/documentation.css [L]
+
+RewriteRule	^font-awesome-css$ https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css [L]
+
+# script
+RewriteRule	^jquery$ Assets/Languages/Jquery/jquery.min.js [L]
+RewriteRule	^js-slide$ Assets/Languages/Jquery/jsSlide.js [L]
+RewriteRule	^js-principal$ Assets/Languages/Js/index.js [L]
+
+# image
+RewriteRule	^favicon$ Assets/Document/Image/favicon_logo.png [L]
+RewriteRule	^miniature$ Assets/Document/Image/miniature_logo.jpg [L]
+RewriteRule	^logo$ Assets/Document/Image/logo.png [L]
