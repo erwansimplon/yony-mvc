@@ -11,7 +11,7 @@
 			set_time_limit(0);
 
 			include ($_SERVER['DOCUMENT_ROOT'].'/Yony/Config/Config.php');
-            include (_DIR_YONY_CONFIG_.'Autoloader.php');
+            		include (_DIR_YONY_CONFIG_.'Autoloader.php');
 			
 			Autoloader::register(_DIR_YONY_CORE_HELPER_SQL_."SelectSqlHelper");
 			Autoloader::register(_DIR_YONY_CORE_HELPER_SQL_."ReplaceSqlHelper");
